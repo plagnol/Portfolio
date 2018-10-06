@@ -4,29 +4,44 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-<div id="lineDrawing"> <svg viewBox="0 0 280 100">
-    <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
-        <path d="M58 80V50.12C57.7 41.6 51.14 35 43 35a15 15 0 0 0 0 30h7.5v15H43a30 30 0 1 1 0-60c16.42 0 29.5 13.23 30 29.89V80H58z" stroke-dasharray="316.8546142578125" style="stroke-dashoffset: 316.855px;"></path>
-        <path d="M73 80V20H58v60h15z" stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
-        <path d="M58 80V49.77C58.5 33.23 71.58 20 88 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80H58zm75 0V20h-15v60h15z" stroke-dasharray="441.1737365722656" style="stroke-dashoffset: 441.174px;"></path>
-        <path d="M118 80V49.77C118.5 33.23 131.58 20 148 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80h-15zm-7.5-60a7.5 7.5 0 1 1-7.48 8v-1c.25-3.9 3.5-7 7.48-7z" stroke-dasharray="338.3048095703125" style="stroke-dashoffset: 338.305px;"></path>
-        <path d="M133 65a15 15 0 0 1-15-15v-7.5h-15V50a30 30 0 0 0 30 30V65zm30 15V49.77C163.5 33.23 176.58 20 193 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80h-15z" stroke-dasharray="406.86920166015625" style="stroke-dashoffset: 406.869px;"></path>
-        <path d="M238 65a15 15 0 0 1 0-30c8.1 0 14.63 6.53 15 15h-15v15h30V49.89C267.5 33.23 254.42 20 238 20a30 30 0 0 0 0 60V65z" stroke-dasharray="301.85546875" style="stroke-dashoffset: 301.855px;"></path>
-        <path d="M260.48 65a7.5 7.5 0 1 1-7.48 8v-1c.26-3.9 3.5-7 7.48-7z" stroke-dasharray="47.12837600708008" style="stroke-dashoffset: 47.1284px;"></path>
+<body >
+<div id="lineDrawing"> <svg viewBox="0 0 1100 800">
+    <g fill="white" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
+        <path d="M 150 250 A 50 50 0 1 1 200 200 L 200 250 L 100 250 A 50 50 0 1 1 200 150 L 200 250"></path>
+        <path d="M 200 250 L 200 150 L 225 150 L 250 200 L 250 150 "></path>
+        <path d="M 200 250 L 225 250 L 225 185 L 260 250 L 275 250"></path>
+        <path d="M 275 250 L 275 185 L 250 185 L 250 150 L 300 150"></path>
+        <path d="M 275 250 L 300 250 L 300 185 L 325 185 L 325 150 L 300 150 "></path>
+        <path fill="white" d="M 350 250 A 50 50 0 1 1 350 150 A 50 50 0 1 1 350 250 "></path>
+        <path fill="red" d="M 350 225 A 10 10 0 1 1 350 175 A 10 10 0 1 1 350 225 "></path>
+        <path d="M 400 250 L 375 150 L 425 150"></path>
+        <path d="M 400 250 L 400 250 L 425 150 "></path>
+        <path d="M 400 100 A 1 1 0 1 1 400 150 A 1 1 0 1 1 400 100 "></path>
     </g>
-</svg> </div>
+</svg>
+</div>
+<footer>
+    <span>Made with</span> <a href="http://anime-js.com">anime.js</a>
+</footer>
+<a class="logo" href="http://anime-js.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1137/anime-logo.png"></img></a>
 </body>
-
+<script src="anime/anime.min.js"></script>
 <script type="text/javascript">
     var lineDrawing = anime({
         targets: '#lineDrawing .lines path',
         strokeDashoffset: [anime.setDashoffset, 0],
-        easing: 'easeInOutSine',
-        duration: 1500,
-        delay: function(el, i) { return i * 250 },
+        backgroundColor: [
+            {value: '#FFF'}, // Or #FFFFFF
+            {value: 'rgb(255, 0, 0)'},
+            {value: 'hsl(100, 60%, 60%)'}
+        ],
+        easing: 'linear',
         direction: 'alternate',
+        duration: 1000,
+        delay: function(el, i) { return i * 85 },
+
         loop: true
     });
 </script>
+
 </html>
