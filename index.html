@@ -2,46 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Antoine Plagnol</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body >
-<div id="lineDrawing"> <svg viewBox="0 0 1100 800">
-    <g fill="white" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
-        <path d="M 150 250 A 50 50 0 1 1 200 200 L 200 250 L 100 250 A 50 50 0 1 1 200 150 L 200 250"></path>
-        <path d="M 200 250 L 200 150 L 225 150 L 250 200 L 250 150 "></path>
-        <path d="M 200 250 L 225 250 L 225 185 L 260 250 L 275 250"></path>
-        <path d="M 275 250 L 275 185 L 250 185 L 250 150 L 300 150"></path>
-        <path d="M 275 250 L 300 250 L 300 185 L 325 185 L 325 150 L 300 150 "></path>
-        <path fill="white" d="M 350 250 A 50 50 0 1 1 350 150 A 50 50 0 1 1 350 250 "></path>
-        <path fill="red" d="M 350 225 A 10 10 0 1 1 350 175 A 10 10 0 1 1 350 225 "></path>
-        <path d="M 400 250 L 375 150 L 425 150"></path>
-        <path d="M 400 250 L 400 250 L 425 150 "></path>
-        <path d="M 400 100 A 1 1 0 1 1 400 150 A 1 1 0 1 1 400 100 "></path>
-    </g>
-</svg>
-</div>
-<footer>
-    <span>Made with</span> <a href="http://anime-js.com">anime.js</a>
-</footer>
-<a class="logo" href="http://anime-js.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1137/anime-logo.png"></img></a>
-</body>
-<script src="anime/anime.min.js"></script>
-<script type="text/javascript">
-    var lineDrawing = anime({
-        targets: '#lineDrawing .lines path',
-        strokeDashoffset: [anime.setDashoffset, 0],
-        backgroundColor: [
-            {value: '#FFF'}, // Or #FFFFFF
-            {value: 'rgb(255, 0, 0)'},
-            {value: 'hsl(100, 60%, 60%)'}
-        ],
-        easing: 'linear',
-        direction: 'alternate',
-        duration: 1000,
-        delay: function(el, i) { return i * 85 },
+<body>
+<div class="section" id="accueil">
+    <div class="row" style="max-width: 100%; max-height: 100%;">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            <div id="lineDrawing">
+                <svg width="100%" height="100%" viewBox="0 0 600 275">
+                    <g fill="white" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
+                        <path d="M 150 250 A 50 50 0 1 1 200 200 L 200 250 L 100 250 A 50 50 0 1 1 200 150 L 200 250"></path>
+                        <path d="M 200 250 L 200 150 L 225 150 L 250 200 L 250 150 "></path>
+                        <path d="M 200 250 L 225 250 L 225 185 L 260 250 L 275 250"></path>
+                        <path d="M 275 250 L 275 185 L 250 185 L 250 150 L 300 150"></path>
+                        <path d="M 275 250 L 300 250 L 300 185 L 325 185 L 325 150 L 300 150 "></path>
+                        <path fill="white" d="M 350 250 A 50 50 0 1 1 350 150 A 50 50 0 1 1 350 250 "></path>
+                        <path fill="#efefef" d="M 350 225 A 10 10 0 1 1 350 175 A 10 10 0 1 1 350 225 "></path>
+                        <path d="M 400 250 L 375 150 L 425 150"></path>
 
-        loop: true
-    });
+                        <path d="M 400 100 A 1 1 0 1 1 400 150 A 1 1 0 1 1 400 100 "></path>
+                        <path d="M 400 150 L 425 150 L 450 190 L 475 150 L 500 150 L 500 250 L 400 250"></path>
+                        <path d="M 500 150 L 550 150 L 550 170 L 525 170 L 525 190 L 550 190 L 550 210 L 525 210 L 525 230 L 550 230 L 550 250 L 500 250"></path>
+                        <path d="M 500 150 L 550 150 L 550 170 L 525 170 L 525 190 L 550 190 L 550 210 L 525 210 L 525 230 L 550 230 L 550 250 L 500 250"></path>
+                        <path d="M 400 250 L 400 250 L 425 150 "></path>
+                        <path fill="black" id="souligner" d="M 150 275 L 500 275 " class="el"></path>
+                    </g>
+                </svg>
+            </div>
+            <div id="plagnol" class="text-center">
+                <div class="square el"></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="anime/anime.min.js"></script>
+<script>
+    function alertee(){
+        alert('rest');
+    }
 </script>
+<script type="text/javascript" src="js/debut.js"></script>
 
 </html>
