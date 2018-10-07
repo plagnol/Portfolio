@@ -1,22 +1,92 @@
-html{
+html, body{
     background-color: #efefef;
 }
 .section {
     width: 100%;
     height: 100%;
+    background-color: #efefef;
 }
 
-#accueil #lineDrawing{
+#firstAnim #lineDrawing{
     margin-top: 50vh;
     transform: translateY(-50%);
 }
-#accueil{
+#firstAnim{
     background-color: #efefef;
 }
 .square{
-    height: 50px;
-    width: 50px;
+    height: 75px;
+    width: 75px;
     background-color: #efefef;
     border-radius: 50%;
     margin: auto;
+}
+#menuPrinc{
+    display: none;
+}
+#menuBase{
+    display: none;
+    margin: auto;
+    width: 100%;
+    height:100%;
+    max-width: 100%;
+}
+.rond{
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    max-width: 100%;
+}
+#launch{
+    padding-top: 35px;
+}
+.rond-center{
+    margin: auto;
+}
+.rond-left{
+    margin-left: auto;
+}
+#menuBase .row{
+    margin:0;
+    padding: 0;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+}
+.menuTitre{
+    color: white;
+    padding-top: 40px;
+    text-align: center;
+}
+.rond:hover{
+    transition: 300ms;
+    background-color: #6D071A;
+    border-radius: 0;
+    opacity: 0.75;
+}
+#projet{
+    display: none;
+}
+#rondProjet{
+    position: absolute;
+    left:calc(50% - 50px);
+    bottom: 100px;
+}
+#centre{
+    height:220px;
+    padding-top: 100px;
+}
+#rond2, #rond3{
+    margin-top: 70px;
+}
+.projetUnique{
+    border-radius: 5px;
+    margin: 0;
+}
+#carouselExampleIndicators{
+    width:100%;
+    min-width: 100%;
+}
+#projet .row{
+    max-width: 100%;
 }
